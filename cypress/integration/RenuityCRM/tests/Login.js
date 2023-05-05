@@ -14,17 +14,17 @@ describe('Login page tests', function () {
         cy.visit('/')
     })
 
-    it('C11999: should show empty field error messages<smoke>', function () {
+    it('C11999: Should show empty field error messages<smoke>', function () {
         loginPage.clicksubmit()
         loginPage.getLoginFailureError().should('contain.text', 'Invalid Username/Password')
     })
 
-    it('C12000: should show invalid email or password error message<smoke><sanity><regression>', function () {
+    it('C12000: Should show invalid email or password error message<smoke><sanity><regression>', function () {
         loginPage.loginUser('incorrect@email.com', 'incorrect-password')
         loginPage.getLoginFailureError().should('contain.text', 'Invalid Username/Password')
     })
 
-    it('C12001: user can successfully login and redirected to dashboard<regression>', function () {
+    it('C12001: User can successfully login and redirected to dashboard<regression>', function () {
         loginPage.loginUser(cred.username, cred.password)
         cy.url().should('not.include', 'Login')
         cy.wait(5000)
