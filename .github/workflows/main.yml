@@ -9,7 +9,7 @@ jobs:
       - name: Cypress.io
         uses: cypress-io/github-action@v5.6.2
         with:
-          start: npm start
+          start: npm test
           # Records to Cypress Cloud
           # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
           record: true
