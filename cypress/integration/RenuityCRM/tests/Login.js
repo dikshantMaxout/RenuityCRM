@@ -24,7 +24,7 @@ describe('Login page tests', function () {
         loginPage.getLoginFailureError().should('contain.text', 'Invalid Username/Password')
     })
 
-    it('C12001: User can successfully login and redirected to dashboard<regression>', function () {
+    it('C12001: User can successfully login and redirected to dashboard', function () {
         loginPage.loginUser(cred.username, cred.password)
         cy.url().should('not.include', 'Login')
         cy.wait(5000)
