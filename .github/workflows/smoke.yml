@@ -1,4 +1,4 @@
-name: Cypress tests
+name: Smoke Test
 on: push
 jobs:
   cypress-run:
