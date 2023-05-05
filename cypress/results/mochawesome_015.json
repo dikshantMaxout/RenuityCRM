@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-03T07:54:29.587Z",
+    "end": "2023-05-03T07:54:40.300Z",
+    "duration": 10713,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fa70f8b5-5b46-420c-be3d-342293834fe6",
+      "title": "",
+      "fullFile": "cypress/integration/testcases/Login.js",
+      "file": "cypress/integration/testcases/Login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2d6eed14-8376-40d8-b49f-812f43e109f4",
+          "title": "LP Sanity Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "C8727: LP - Login - Validate login with Multiple customers",
+              "fullTitle": "LP Sanity Test C8727: LP - Login - Validate login with Multiple customers",
+              "timedOut": null,
+              "duration": 10682,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const loginPage = new _LoginPage.default();\ncy.visit('/');\ncy.url().should('include', 'leadperfection');\nloginPage.getusername().type(cred.username).should('have.value', cred.username);\nloginPage.getpassword().type(cred.password);\nloginPage.getloginbutton().click({\n  force: true\n});",
+              "err": {},
+              "uuid": "eed19210-2797-4005-8932-fb33a951d588",
+              "parentUUID": "2d6eed14-8376-40d8-b49f-812f43e109f4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "C8720: LP - Prospects - Lead Entry Form - Create a new lead",
+              "fullTitle": "LP Sanity Test C8720: LP - Prospects - Lead Entry Form - Create a new lead",
+              "timedOut": null,
+              "duration": 23,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\n//cy.contains('TestRail');",
+              "err": {},
+              "uuid": "3d8b93d0-6705-43dd-a4c1-ec3d4c8905af",
+              "parentUUID": "2d6eed14-8376-40d8-b49f-812f43e109f4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "eed19210-2797-4005-8932-fb33a951d588",
+            "3d8b93d0-6705-43dd-a4c1-ec3d4c8905af"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10705,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

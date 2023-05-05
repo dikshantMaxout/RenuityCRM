@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-05-03T13:14:04.967Z",
+    "end": "2023-05-03T13:14:22.216Z",
+    "duration": 17249,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "510808d3-d738-44b7-880d-1ef63a7588e9",
+      "title": "",
+      "fullFile": "cypress/integration/testcases/Login.js",
+      "file": "cypress/integration/testcases/Login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2e1c747e-d7d0-4fcc-9bef-33555f7048ed",
+          "title": "LP Sanity Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "C8727: LP Login - Validate login with Multiple customers",
+              "fullTitle": "LP Sanity Test C8727: LP Login - Validate login with Multiple customers",
+              "timedOut": null,
+              "duration": 13358,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const loginPage = new _LoginPage.default();\ncy.visit('/');\ncy.url().should('include', 'Logout');\nloginPage.getusername().type(cred.username).should('have.value', cred.username);\nloginPage.getpassword().type(cred.password);\nloginPage.getloginbutton().click({\n  force: true\n});\ncy.url().should('not.include', 'Login');\ncy.wait(5000);\nloginPage.getuserprofile().click({\n  force: true\n});\nloginPage.getlogoutbutton().click({\n  force: true\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 7000ms: expected 'https://i417aw.leadperfection.com/Login.aspx?ReturnUrl=%2f' to include 'Logout'",
+                "estack": "AssertionError: Timed out retrying after 7000ms: expected 'https://i417aw.leadperfection.com/Login.aspx?ReturnUrl=%2f' to include 'Logout'\n    at Context.eval (webpack:///./cypress/integration/testcases/Login.js:11:13)",
+                "diff": null
+              },
+              "uuid": "863f29ae-413f-4795-a89a-b718f8af2d69",
+              "parentUUID": "2e1c747e-d7d0-4fcc-9bef-33555f7048ed",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "C8720: LP - Prospects - Lead Entry Form - Create a new lead",
+              "fullTitle": "LP Sanity Test C8720: LP - Prospects - Lead Entry Form - Create a new lead",
+              "timedOut": null,
+              "duration": 3870,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');",
+              "err": {},
+              "uuid": "07a1f5c6-c3cc-4e25-a378-905ddfe6ffa5",
+              "parentUUID": "2e1c747e-d7d0-4fcc-9bef-33555f7048ed",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "07a1f5c6-c3cc-4e25-a378-905ddfe6ffa5"
+          ],
+          "failures": [
+            "863f29ae-413f-4795-a89a-b718f8af2d69"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 17228,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

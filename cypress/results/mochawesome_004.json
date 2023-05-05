@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-05-03T06:46:58.510Z",
+    "end": "2023-05-03T06:47:01.223Z",
+    "duration": 2713,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cab2762e-514f-401b-83ba-faac828a14e2",
+      "title": "",
+      "fullFile": "cypress/integration/testcases/Login.js",
+      "file": "cypress/integration/testcases/Login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "C8727: LP - Login - Validate login with Multiple customers",
+          "fullTitle": "C8727: LP - Login - Validate login with Multiple customers",
+          "timedOut": null,
+          "duration": 141,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit(URL);",
+          "err": {
+            "message": "CypressError: `cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit",
+            "estack": "CypressError: `cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit\n    at Context.visit (https://i417aw.leadperfection.com/__cypress/runner/cypress_runner.js:147702:78)\n    at wrapped (https://i417aw.leadperfection.com/__cypress/runner/cypress_runner.js:161010:43)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/integration/testcases/Login.js:2:7)",
+            "diff": null
+          },
+          "uuid": "e48da003-28bc-4780-b8a3-b6b1772c39b9",
+          "parentUUID": "cab2762e-514f-401b-83ba-faac828a14e2",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "C8720: LP - Prospects - Lead Entry Form - Create a new lead",
+          "fullTitle": "C8720: LP - Prospects - Lead Entry Form - Create a new lead",
+          "timedOut": null,
+          "duration": 1299,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://example.cypress.io');\n//cy.contains('TestRail');",
+          "err": {},
+          "uuid": "f16a1642-5bbc-42de-9d06-86fd2c055d0a",
+          "parentUUID": "cab2762e-514f-401b-83ba-faac828a14e2",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "f16a1642-5bbc-42de-9d06-86fd2c055d0a"
+      ],
+      "failures": [
+        "e48da003-28bc-4780-b8a3-b6b1772c39b9"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 1440,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

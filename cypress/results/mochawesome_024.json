@@ -1,0 +1,155 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2023-05-03T18:31:48.069Z",
+    "end": "2023-05-03T18:32:17.279Z",
+    "duration": 29210,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0e2f8557-fd7f-4383-97df-9561e3f91e61",
+      "title": "",
+      "fullFile": "cypress/integration/RenuityCRM/tests/Login.js",
+      "file": "cypress/integration/RenuityCRM/tests/Login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5f9788b8-0b8e-450b-8372-78b5ff3b9d0c",
+          "title": "Login page tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "C11999: should show empty field error messages",
+              "fullTitle": "Login page tests C11999: should show empty field error messages",
+              "timedOut": null,
+              "duration": 9031,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.clickSubmit();\nloginPage.getLoginFailureError().should('contain.text', 'Invalid Username/Password');",
+              "err": {
+                "message": "TypeError: loginPage.clickSubmit is not a function",
+                "estack": "TypeError: loginPage.clickSubmit is not a function\n    at Context.eval (webpack:///./cypress/integration/RenuityCRM/tests/Login.js:18:18)",
+                "diff": null
+              },
+              "uuid": "a5b44d73-a512-4e92-b247-a0f454ecf323",
+              "parentUUID": "5f9788b8-0b8e-450b-8372-78b5ff3b9d0c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "C12000: should show invalid email or password error message",
+              "fullTitle": "Login page tests C12000: should show invalid email or password error message",
+              "timedOut": null,
+              "duration": 9382,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.loginUser('incorrect@email.com', 'incorrect-password');\nloginPage.getLoginFailureError().should('contain.text', 'Invalid Username/Password');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 7000ms: Expected to find element: `#lblLoginError`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 7000ms: Expected to find element: `#lblLoginError`, but never found it.\n    at Context.eval (webpack:///./cypress/integration/RenuityCRM/tests/Login.js:24:41)",
+                "diff": null
+              },
+              "uuid": "85e942c5-c963-4362-a510-710b7bf90f61",
+              "parentUUID": "5f9788b8-0b8e-450b-8372-78b5ff3b9d0c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "C12001: user can successfully login and redirected to dashboard",
+              "fullTitle": "Login page tests C12001: user can successfully login and redirected to dashboard",
+              "timedOut": null,
+              "duration": 10753,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.loginUser(cred.username, cred.password);\ncy.url().should('not.include', 'Login');\ncy.wait(5000);\nloginPage.logoutUser();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 7000ms: expected 'https://i417aw.leadperfection.com/Login.aspx?ReturnUrl=%2f' to not include 'Login'",
+                "estack": "AssertionError: Timed out retrying after 7000ms: expected 'https://i417aw.leadperfection.com/Login.aspx?ReturnUrl=%2f' to not include 'Login'\n    at Context.eval (webpack:///./cypress/integration/RenuityCRM/tests/Login.js:29:17)",
+                "diff": null
+              },
+              "uuid": "d20606ae-e8a7-4120-9861-5b748d825fc2",
+              "parentUUID": "5f9788b8-0b8e-450b-8372-78b5ff3b9d0c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a5b44d73-a512-4e92-b247-a0f454ecf323",
+            "85e942c5-c963-4362-a510-710b7bf90f61",
+            "d20606ae-e8a7-4120-9861-5b748d825fc2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 29166,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
