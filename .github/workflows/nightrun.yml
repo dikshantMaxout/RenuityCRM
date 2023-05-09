@@ -1,14 +1,16 @@
-name: Sanity Test
-on: push
+name: OvernightJob
+on:
+  schedule:
+    # runs tests every day at 4am
+    - cron: '0 4 * * *'
 jobs:
-  cypress-run:
+  nightly:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        
-      - name: Cypress run with env
+      - name: Cypress nightly tests 🌃
         uses: cypress-io/github-action@v5
         with:
           browser: chrome
-          env: SUITE=sanity
+          env: SUITE=smoke
