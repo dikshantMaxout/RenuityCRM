@@ -9,7 +9,7 @@
     "smoketest": "npx cypress run --browser chrome --env SUITE=smoke",
     "sanitytest": "npx cypress run --browser chrome --env SUITE=sanity",
     "regressiontest": "npx cypress run --browser chrome --env SUITE=regression",
-    "Cytestcloud": "npx cypress run --record --key 02d4ed71-9b7b-4d7e-ade7-6697229c13a5 --browser chrome"
+    "Cytestcloud": "npx cypress run --record --key 02d4ed71-9b7b-4d7e-ade7-6697229c13a5 --browser edge"
   },
   "author": "Dikshant",
   "license": "ISC",
