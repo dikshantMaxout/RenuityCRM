@@ -1,7 +1,10 @@
 name: Smoke Test
-on: push
+on:
+  push:
+      branches:
+          - main
 jobs:
-  cypress-run:
+  generate-report:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
