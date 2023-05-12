@@ -7,9 +7,9 @@ module.exports = defineConfig({
   reporter: 'mochawesome',
   reporterOptions: {
     reportDir: 'cypress/results',
-    overwrite: false,
-    html: false,
-    json: true,
+    overwrite: true,
+    html: true,
+    json: false,
   },
   env: {
     "testrail": {
@@ -19,10 +19,16 @@ module.exports = defineConfig({
       "runId": "1448",
       "projectId": "P14",
       "screenshots": true
-    }
+    },
+    "allureReuseAfterSpec": true,
+    "allureResultsPath": "allure-results",
+  },
+  retries: {
+    runMode: 1,
+    openMode: 0,
   },
   e2e: {
-    baseUrl : 'https://i417aw.leadperfection.com/',
+    baseUrl: 'https://i417ax.leadperfection.com/',
     setupNodeEvents(on, config) {
       return require('./cypress/support/index')(on, config)
     },

@@ -15,6 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import '@shelex/cypress-allure-plugin';
 
 beforeEach(function() {
     let testSuite = Cypress.env('SUITE');
@@ -28,6 +29,8 @@ beforeEach(function() {
       this.skip();
     }
   })
+
+  
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

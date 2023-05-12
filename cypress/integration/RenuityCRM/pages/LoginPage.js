@@ -8,14 +8,16 @@ class LoginPage {
     clicksubmit() {
         cy.get('#btnLogin').click()
     }
-
+    
     getLoginFailureError() {
         return cy.get('#lblLoginError')
     }
 
     logoutUser() {
         cy.get('#userAvatar').click({ force: true })
-        cy.get('li#tabLogout').click({ force: true })
+        cy.get('a#logOutBtn').click({ force: true })
+        cy.wait(2000)
+        cy.url().should('include','Login')
     }
 
 }

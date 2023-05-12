@@ -12,3 +12,7 @@ jobs:
         with:
           browser: chrome
           env: SUITE=smoke
+
+      - name: Generate Allure report
+        if: always()
+        uses: afiore/action-allure-report@v0.1.0
