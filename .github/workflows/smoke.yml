@@ -14,7 +14,7 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           browser: chrome
-          env: allure=true --SUITE=smoke
+          env: allure=true
       - name: Generate Allure report
         if: always()
         uses: afiore/action-allure-report@v0.1.0
