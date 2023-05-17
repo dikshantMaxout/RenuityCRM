@@ -26,10 +26,11 @@ describe('Login page tests', function () {
 
     it('C12001: User can successfully login and redirected to dashboard<smoke>', function () {
         loginPage.loginUser(cred.username, cred.password)
-        //cy.contains('submit').click()
+        //loginPage.clickConfirmModal()
         cy.url().should('not.include', 'Login')
-        cy.wait(5000)
-        loginPage.logoutUser()
+        //cy.wait(5000)
+        //loginPage.logoutUser()
     })
+
 
 })

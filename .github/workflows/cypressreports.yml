@@ -1,0 +1,20 @@
+name: Generate Cypress Reports
+on:
+  push:
+      branches:
+          - main
+jobs:
+    cypress-run:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v3.5.2
+          - name: Cypress.io
+            uses: cypress-io/github-action@v5.6.2
+          - name: Copy test execution videos and screenshots
+            run:
+                mkdir public
+                cp -r cypress/videos public/videos
+                
+
+        
