@@ -14,7 +14,7 @@ jobs:
 
           - name: Install cypress and verify
             run : |
-              npm ci
+              npm install cypress --save-dev
               $(npm bin)/cypress verify
 
           - name: Run Cypress Tests
