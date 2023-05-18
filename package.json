@@ -6,6 +6,7 @@
   "scripts": {
     "cy:run": "cypress run --env allure=true --headless",
     "test": "npm run cy:run || npm run posttest && npm run launchreport",
+    "test:chrome":"npx cypress run --browser chrome",
     "testheaded": "npx cypress run --env allure=true --browser chrome --headed || npm run posttest && npm run launchreport ",
     "testheadless": "npx cypress run --browser chrome",
     "smoketest": "npx cypress run --browser chrome --env SUITE=smoke",
