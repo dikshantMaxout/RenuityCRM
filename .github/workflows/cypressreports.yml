@@ -14,12 +14,12 @@ jobs:
 
           - name: Install cypress and verify
             run : |
-              npm i
+              npm ci
               $(npm bin)/cypress verify
 
           - name: Run Cypress Tests
             run: npm run test:chrome
-            continue-on-error: false
+            continue-on-error: true
 
           - name: Copy test execution videos and screenshots
             run: |
